@@ -1,10 +1,13 @@
 import reflex as rx
 
 def titulo():
-    return rx.heading("¿Quién eis quién?",size="9")
+    return rx.heading("¿Quién es quién?",size="9")
 
 def jugar():
-    return rx.button("JUGAR")
+    return rx.button(rx.text("JUGAR", size="7"),
+                     size="4",
+                     color_scheme="grass",
+                     )
 
 def index() -> rx.Component:
     # Welcome Page (Index)
