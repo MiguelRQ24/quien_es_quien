@@ -11,5 +11,5 @@ def jugar():
                      )
 
 def index() -> rx.Component:
-    # Welcome Page (Index)
+    
     return rx.center(rx.heading(" "), titulo(), jugar(), direction="column", align="center", spacing="9")
