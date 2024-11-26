@@ -6,7 +6,7 @@ caracteristicas = [
 ]
 
 def pregunta():
-    return rx.hstack(rx.text("Tu personaje tiene:"), dynoselect(caracteristicas, placeholder="Caracteristica", search_placeholder="Busca caracteristica"), direction="row",)
+    return rx.hstack(rx.text("Tu personaje tiene:"), rx.input(placeholder="Caracteristica"), direction="row",)
 
 def juego():
-    return rx.center(pregunta(), )
+    return rx.center(pregunta(),)
