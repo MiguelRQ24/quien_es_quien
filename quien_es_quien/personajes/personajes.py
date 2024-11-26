@@ -92,12 +92,14 @@ class alex(rx.State):
     # Adjudicar atributos personaje
     ATRIBUTOS = ("pelo negro", "nariz pequeña", "boca grande", "ojos castaño claro", "mandibula prominente", "bigote")
 
-class david(rx.State):
+class sam(rx.State):
 
     # Crear la constante atributos del personaje
     ATRIBUTOS: tuple
     # Adjudicar atributos personaje
-    ATRIBUTOS = ("pelo rubio", "nariz pequeña", "boca grande", "ojos castaño claro", "mofletes estirados", "aspecto serio")
+    ATRIBUTOS = ("pelo blanco", "nariz media", "boca pequeña", "ojos castaño oscuro", "mofletes rellenos", "pelo escaso")
+
+
         
     
     
