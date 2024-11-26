@@ -7,7 +7,19 @@ personajes = {
     "anne": ("pelo marron", "nariz grande", "boca pequeña", "ojos castaño", "pendientes", "papada"),
     "george": ("pelo blanco", "nariz mediana", "boca grande", "ojos castaño claro", "mandibula prominente", "aspecto triste"),
     "joe": ("pelo rubio", "nariz media", "boca pequeña", "ojos castaño claro", "gafas", "aspecto risueño"),
-    
+    "anita": ("pelo rubio", "nariz pequeña", "boca pequeña", "ojos grises", "mofletes rojizos", "coletas"),
+    "bill": ("pelo escaso", "pelo naranja", "nariz pequeña", "boca pequeña", "ojos castaño", "mofletes abundantes", "aspecto risueño"),
+    "alfred":("pelo naranja", "nariz mediana", "boca pequeña", "ojos azules", "bigote", "aspecto serio"),
+    "max": ("pelo negro", "nariz grande", "boca grande", "ojos castaño", "bigote", "pelo rizado"),
+    "tom": ("pelo negro", "nariz pequeña", "boca pequeña", "ojos azules", "mofletes estirados", "pelo escaso"),
+    "alex": ("pelo negro", "nariz pequeña", "boca grande", "ojos castaño claro", "mandibula prominente", "bigote"),
+    "sam": ("pelo blanco", "nariz media", "boca pequeña", "ojos castaño oscuro", "mofletes rellenos", "pelo escaso"),
+    "richard": ("pelo marron", "nariz media", "boca pequeña", "ojos castaño", "barba abundante", "pelo escaso"),
+    "paul":("pelo blanco", "nariz pequeña", "boca pequeña", "ojos castaño", "mofletes estirados", "aspecto sereno"),
+    "maria":("pelo castaño", "nariz pequeña", "boca mediana", "ojos castaño", "boina", "pendientes"),
+    "frans":("pelo naranja", "nariz pequeña", "boca pequeñas", "ojos castaño claro", "mofletes estirados", "cara cuadrada"),
+    ""
+
 }
 
 class robert(rx.State):
@@ -184,7 +196,7 @@ class bernard(rx.State):
     ATRIBUTOS: tuple
     # Adjudicar atributos personaje
     ATRIBUTOS = ("pelo marron", "nariz grande", "boca pequeña", "ojos castaño", "gorra", "aspecto serio")
-    
+
     
        
     
