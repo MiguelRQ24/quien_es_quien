@@ -1,4 +1,14 @@
 import reflex as rx
+personajes = {
+    "robert": ("pelo marrón", "nariz grande", "boca grande", "ojos azules", "mofletes colorados", "aspecto triste"),
+    "susan": ("pelo blanco", "nariz pequeña", "boca grande", "ojos castaños claros", "mofletes colorados", "aspecto risueño"),
+    "clarie": ("pelo naranja", "nariz pequeña", "boca pequeña", "ojos castaños", "sombrero de flores", "pendientes"),
+    "david": ("pelo rubio", "nariz pequeña", "boca grande", "ojos castaño claro", "mofletes estirados", "aspecto serio"),
+    "anne": ("pelo marron", "nariz grande", "boca pequeña", "ojos castaño", "pendientes", "papada"),
+    "george": ("pelo blanco", "nariz mediana", "boca grande", "ojos castaño claro", "mandibula prominente", "aspecto triste"),
+    "joe": ("pelo rubio", "nariz media", "boca pequeña", "ojos castaño claro", "gafas", "aspecto risueño"),
+    
+}
 
 class robert(rx.State):
 
@@ -13,7 +23,6 @@ class susan(rx.State):
     ATRIBUTOS: tuple
     # Adjudicar atributos personaje
     ATRIBUTOS = ("pelo blanco", "nariz pequeña", "boca grande", "ojos castaños claros", "mofletes colorados", "aspecto risueño")
-
 
 class claire(rx.State):
 
