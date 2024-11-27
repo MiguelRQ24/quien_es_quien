@@ -18,7 +18,12 @@ personajes = {
     "paul":("pelo blanco", "nariz pequeña", "boca pequeña", "ojos castaño", "mofletes estirados", "aspecto sereno"),
     "maria":("pelo castaño", "nariz pequeña", "boca mediana", "ojos castaño", "boina", "pendientes"),
     "frans":("pelo naranja", "nariz pequeña", "boca pequeñas", "ojos castaño claro", "mofletes estirados", "cara cuadrada"),
-    ""
+    "philip": ("pelo marron oscuro", "nariz pequeña", "boca grande", "ojos castaño claro", "pelo ruloso", "mofletes colorados"),
+    "eric":("pelo rubio", "nariz pequeña", "boca grande", "ojos castaño claro", "gorra", "cara cuadrada"),
+    "david":("pelo rubio", "nariz mediana", "boca grande", "ojos castaño claro", "bigote", "orejas grandes"),
+    "peter": ("pelo blanco", "nariz grande", "boca grande", "ojos azules", "mofletes prominentes"),
+    "herman":("pelo naranja", "nariz grande", "boca pequeña", "ojos castaño claro", "mandibula pronunciada", "aspecto serio", "pelo escaso"),
+    "bernard":("pelo marron", "nariz grande", "boca pequeña", "ojos castaño", "gorra", "aspecto serio")
 
 }
 
