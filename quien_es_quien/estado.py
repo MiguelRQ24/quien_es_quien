@@ -14,7 +14,5 @@ class escoger(rx.State):
         return rx.redirect("/juego")
     caracteristica: str
     validacion: str
-    def validar(self):
-        self.validacion = caracteristica_valida(escoger.caracteristica, escoger.personaje_escogido)
-    def tiene_caracteristica(self):
-        tiene_caracteristica(escoger.caracteristica, escoger.personaje_escogido,)
+    def validar(self): 
+        self.validacion = caracteristica_valida(self.caracteristica)
