@@ -20,7 +20,5 @@ class escoger(rx.State):
         self.girar()
     personajes_girar: list = []
     def girar(self):
-        self.personajes_girar.append("entra?")
         if self.validacion:
-            self.personajes_girar.append("prueba")
-            self.personajes_girar.append(girar_pjs(self.caracteristica, self.personajes_girar, self.personaje_escogido))
+            self.personajes_girar += girar_pjs(self.caracteristica, self.personajes_girar, self.personaje_escogido)
