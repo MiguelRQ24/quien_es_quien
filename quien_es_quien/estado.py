@@ -1,16 +1,20 @@
 import reflex as rx
-from src.escoger_personaje import escoger_personaje 
-import src.tiene_caracteristica as tiene_caracteristica
+import quien_es_quien.personajes.personajes as pjs
+from src.escoger_personaje import escoger_personaje
+from src.comprobar_caracteristica import caracteristica_valida
+from src.tiene_caracteristica import tiene_caracteristica
 
-personajes = ("Susan", "Claire", "David", "Anne", "Robert", "Anita", "Joe", "George", "Bill", "Alfred", "Max", "Tom", "Alex", "Sam", "Richard", "Paul")
+personajes = ("susan", "claire", "david", "anne", "robert", "anita", "joe", "george", "bill", "alfred", "max", "tom", "alex", "sam", "richard", "paul")
 
 class escoger(rx.State):
     personaje_escogido: str
     def escoger(self):
+        self.personaje_escogido = ""
         self.personaje_escogido = escoger_personaje(personajes)
         return rx.redirect("/juego")
-
-class caracteristicas(rx.State):
     caracteristica: str
+    validacion: str
+    def validar(self):
+        self.validacion = caracteristica_valida(escoger.caracteristica, escoger.personaje_escogido)
     def tiene_caracteristica(self):
-        tiene_caracteristica.tiene_caracteristica(caracteristicas.caracteristica, escoger.personaje_escogido)
+        tiene_caracteristica(escoger.caracteristica, escoger.personaje_escogido,)

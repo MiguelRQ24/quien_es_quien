@@ -1,5 +1,4 @@
+import reflex as rx
+import quien_es_quien.personajes.personajes as pjs
 def tiene_caracteristica(caracteristica, personaje):
-    if caracteristica in personajes[personaje]:
-        return 'la tiene'
-    else:
-        return 'no la tiene'
+    rx.cond(caracteristica in pjs.personajes[personaje], 'la tiene', 'no la tiene')
