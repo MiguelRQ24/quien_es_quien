@@ -1,6 +1,6 @@
 import reflex as rx
 import quien_es_quien.estado as est
-from reflex_dynoselect import dynoselect
+
 caracteristicas = [
     {"value": "pelo marron", "label": "pelo marron"},
 ]
