@@ -7,7 +7,7 @@ def pregunta():
                      rx.text(est.escoger.personajes_girar),
                      rx.text(est.escoger.personaje_escogido),
                      rx.button("Enviar", on_click=est.escoger.validar),
-                     rx.text(est.escoger.validacion),
+                     rx.text(rx.cond(est.escoger.validacion, "", "caracteristica incorrecta, prueba otra vez")),
                      direction="row",)
 
 def juego():
