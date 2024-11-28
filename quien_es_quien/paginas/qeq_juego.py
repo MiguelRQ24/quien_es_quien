@@ -15,7 +15,6 @@ def vista_persnajes():
                     rx.cond(est.escoger.girados["alfred"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjAlfred.jpg", width="100px", height="auto"),rx.text("Alfred"))),
                     rx.cond(est.escoger.girados["max"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjMax.jpg", width="100px", height="auto"),rx.text("Max"))),
                     rx.cond(est.escoger.girados["tom"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjTom.jpg", width="100px", height="auto"),rx.text("Tom"))),
-                    rx.cond(est.escoger.girados["alex"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjAlex.jpg", width="100px", height="auto"),rx.text("Alex"))),
                     rx.cond(est.escoger.girados["sam"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjSam.jpg", width="100px", height="auto"),rx.text("Sam"))),
                     rx.cond(est.escoger.girados["richard"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjRichard.jpg", width="100px", height="auto"),rx.text("Richard"))),
                     rx.cond(est.escoger.girados["paul"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjPaul.jpg", width="100px", height="auto"),rx.text("Paul"))),
@@ -27,11 +26,12 @@ def vista_persnajes():
                     rx.cond(est.escoger.girados["herman"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjHerman.jpg", width="100px", height="auto"),rx.text("Herman"))), 
                     rx.cond(est.escoger.girados["bernard"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjBernard.jpg", width="100px", height="auto"),rx.text("Bernard"))),
                     rx.cond(est.escoger.girados["charles"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjCharles.jpg", width="100px", height="auto"),rx.text("Charles"))),
+                    rx.cond(est.escoger.girados["alex"], rx.text("girado", color_scheme="red"), rx.vstack(rx.image(src="/personajes_qsq_01.png", width="100px", height="auto"), rx.text("Alex"))),
                     columns="8", rows="3", spacing="3")
 def pregunta():
     return rx.hstack(rx.text("Tu personaje tiene:"),
                      rx.input(placeholder="Caracteristica", on_change=est.escoger.set_caracteristica, size="1" ),
-                     rx.button("Enviar", on_click=est.escoger.validar), 
+                     rx.button("Enviar", on_click=est.escoger.validar, size="1"), 
                      rx.text(rx.cond(est.escoger.validacion, "", "caracteristica incorrecta, prueba otra vez")),
                      direction="row",
                     )
