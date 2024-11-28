@@ -17,8 +17,10 @@ class escoger(rx.State):
     validacion: bool
     def validar(self): 
         self.validacion = caracteristica_valida(self.caracteristica)
-        self.girar()
+        self.cual_girar()
     personajes_girar: list = []
-    def girar(self):
+    def cual_girar(self):
         if self.validacion:
             self.personajes_girar += girar_pjs(self.caracteristica, self.personajes_girar, self.personaje_escogido)
+    def susan(self):
+        return rx.cond(self.personajes_girar.__contains__("susan"), rx.text("girado") , rx.text("Susan"))

@@ -1,6 +1,8 @@
 import reflex as rx
 import quien_es_quien.estado as est
 
+def vista_persnajes():
+    return rx.grid( rx.text(est.escoger.susan) , rx.text("Clarie"), rx.text("David"), columns="6", rows="4")
 def pregunta():
     return rx.hstack(rx.text("Tu personaje tiene:"), 
                      rx.input(placeholder="Caracteristica", on_change=est.escoger.set_caracteristica), 
@@ -11,4 +13,4 @@ def pregunta():
                      direction="row",)
 
 def juego():
-    return rx.center(pregunta(), )
+    return rx.center(vista_persnajes(), pregunta(), )
