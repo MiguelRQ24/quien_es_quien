@@ -1,12 +1,14 @@
 import reflex as rx
 import quien_es_quien.estado as est
-from reflex_dynoselect import dynoselect
-caracteristicas = [
-    {"value": "pelo marron", "label": "pelo marron"},
-]
 
 def pregunta():
-    return rx.hstack(rx.text("Tu personaje tiene:"), rx.input(placeholder="Caracteristica"), direction="row",)
+    return rx.hstack(rx.text("Tu personaje tiene:"), 
+                     rx.input(placeholder="Caracteristica", on_change=est.escoger.set_caracteristica), 
+                     rx.text(est.escoger.personajes_girar),
+                     rx.text(est.escoger.personaje_escogido),
+                     rx.button("Enviar", on_click=est.escoger.validar),
+                     rx.text(rx.cond(est.escoger.validacion, "", "caracteristica incorrecta, prueba otra vez")),
+                     direction="row",)
 
 def juego():
-    return rx.center(pregunta(),)
+    return rx.center(pregunta(), )

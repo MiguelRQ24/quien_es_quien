@@ -1,11 +1,24 @@
 import reflex as rx
-from src.escoger_personaje import escoger_personaje 
+import quien_es_quien.personajes.personajes as pjs
+from src.escoger_personaje import escoger_personaje
+from src.comprobar_caracteristica import caracteristica_valida
+from src.girar_personajes import girar_pjs
 
-personajes = ("Susan", "Claire", "David", "Anne", "Robert", "Anita", "Joe", "George", "Bill", "Alfred", "Max", "Tom", "Alex", "Sam", "Richard", "Paul")
+personajes = ("susan", "claire", "david", "anne", "robert", "anita", "joe", "george", "bill", "alfred", "max", "tom", "alex", "sam", "richard", "paul")
 
 class escoger(rx.State):
     personaje_escogido: str
     def escoger(self):
+        self.personajes_girar.clear()
+        self.personaje_escogido = ""
         self.personaje_escogido = escoger_personaje(personajes)
         return rx.redirect("/juego")
-    
+    caracteristica: str
+    validacion: bool
+    def validar(self): 
+        self.validacion = caracteristica_valida(self.caracteristica)
+        self.girar()
+    personajes_girar: list = []
+    def girar(self):
+        if self.validacion:
+            self.personajes_girar += girar_pjs(self.caracteristica, self.personajes_girar, self.personaje_escogido)
