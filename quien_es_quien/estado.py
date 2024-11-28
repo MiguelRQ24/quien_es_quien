@@ -10,26 +10,38 @@ class escoger(rx.State):
     personaje_escogido: str
     def escoger(self):
         self.personaje_escogido = ""
-        self.personaje_escogido = escoger_personaje(personajes)
-        return rx.redirect("/juego")
-    caracteristica: str
-    validacion: bool = True
-    def validar(self): 
-        self.validacion = caracteristica_valida(self.caracteristica)
-        self.cual_girar()
-    personajes_girar: list = []
-    def cual_girar(self):
-        if self.validacion:
-            self.personajes_girar += girar_pjs(self.caracteristica, self.personajes_girar, self.personaje_escogido)
-        self.girar()
-    personajes_rectos: list = list(personajes)
-
-    girados: dict = {
+        self.caracteristica = ""
+        self.validacion = True
+        self.personajes_girar = []
+        self.personajes_rectos = list(personajes)
+        self.girados = {
                     "susan": False, 'robert': False, 'claire': False, 'david': False, 'anne': False, 'george': False, 
                     'joe': False, 'anita': False, 'bill': False, 'alfred': False, 'max': False, 'tom': False, 'alex': False, 
                     'sam': False, 'richard': False, 'paul': False, 'maria': False, 'frans': False, 'philip': False, 
                     'eric': False, 'peter': False, 'herman': False, 'bernard': False
 }
+        self.personaje_escogido = escoger_personaje(personajes)
+        return rx.redirect("/juego")
+    
+    caracteristica: str
+    validacion: bool
+    def validar(self): 
+        self.validacion = caracteristica_valida(self.caracteristica)
+        self.cual_girar()
+
+    personajes_girar: list
+    def cual_girar(self):
+        if self.validacion:
+            self.personajes_girar += girar_pjs(self.caracteristica, self.personajes_girar, self.personaje_escogido)
+        self.girar()
+
+    personajes_rectos: list
+    girados: dict = {
+                    "susan": False, 'robert': False, 'claire': False, 'david': False, 'anne': False, 'george': False, 
+                    'joe': False, 'anita': False, 'bill': False, 'alfred': False, 'max': False, 'tom': False, 'alex': False, 
+                    'sam': False, 'richard': False, 'paul': False, 'maria': False, 'frans': False, 'philip': False, 
+                    'eric': False, 'peter': False, 'herman': False, 'bernard': False
+                    }
     def girar(self):
         for personaje in self.personajes_girar:
             if personaje in self.personajes_rectos:
