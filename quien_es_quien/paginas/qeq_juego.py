@@ -28,13 +28,13 @@ def vista_persnajes():
                     rx.cond(est.escoger.girados["charles"], rx.text("girado") , rx.text("Charles")),
                     columns="6", rows="4", spacing="3")
 def pregunta():
-    return rx.hstack(rx.text("Tu personaje tiene:"),
-                     rx.input(placeholder="Caracteristica", on_change=est.escoger.set_caracteristica), 
-                     rx.text(est.escoger.personajes_girar),
-                     rx.text(est.escoger.personaje_escogido),
-                     rx.button("Enviar", on_click=est.escoger.validar),
+    return rx.vstack(rx.hstack(rx.text("Tu personaje tiene:"),
+                               rx.input(placeholder="Caracteristica", on_change=est.escoger.set_caracteristica), 
+                               rx.button("Enviar", on_click=est.escoger.validar),
+                               direction="row",
+                              ),
                      rx.text(rx.cond(est.escoger.validacion, "", "caracteristica incorrecta, prueba otra vez")),
-                     direction="row",)
+                     )
 
 def juego():
     return rx.center(rx.vstack(vista_persnajes(), pregunta(), direction="column" ))
