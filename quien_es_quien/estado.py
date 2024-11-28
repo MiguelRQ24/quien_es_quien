@@ -4,7 +4,7 @@ from src.escoger_personaje import escoger_personaje
 from src.comprobar_caracteristica import caracteristica_valida
 from src.girar_personajes import girar_pjs
 
-personajes = ('robert', 'susan', 'claire', 'david', 'anne', 'george', 'joe', 'anita', 'bill', 'alfred', 'max', 'tom', 'alex', 'sam', 'richard', 'paul', 'maria', 'frans', 'philip', 'eric', 'peter', 'herman', 'bernard')
+personajes = ('robert', 'susan', 'claire', 'david', 'anne', 'george', 'joe', 'anita', 'bill', 'alfred', 'max', 'tom', 'alex', 'sam', 'richard', 'paul', 'maria', 'frans', 'philip', 'eric', 'peter', 'herman', 'bernard', "charles")
 
 class escoger(rx.State):
     personaje_escogido: str
