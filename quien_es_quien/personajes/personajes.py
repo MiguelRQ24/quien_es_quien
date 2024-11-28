@@ -5,7 +5,7 @@ personajes = {
     "susan": ["pelo blanco", "nariz pequeña", "boca grande", "ojos marrones ", "mofletes colorados", "aspecto risueño"],
     "claire": ["pelirojo", "nariz pequeña", "boca pequeña", "ojos marrones", "sombrero de flores", "pendientes"],
     "david": ["pelo rubio", "nariz pequeña", "boca grande", "ojos marrones", "mofletes estirados", "aspecto serio"],
-    "anne": ["pelo castaño", "nariz grande", "boca pequeña", "ojos marrones", "pendientes", "papada"],
+    "anne": ["pelo castaño oscuro", "nariz grande", "boca pequeña", "ojos marrones", "pendientes", "papada"],
     "george": ["pelo blanco", "nariz mediana", "boca grande", "ojos marrones", "mandibula prominente", "aspecto triste"],
     "joe": ["pelo rubio", "nariz mediana", "boca pequeña", "ojos marrones", "gafas", "aspecto risueño"],
     "anita": ["pelo rubio", "nariz pequeña", "boca pequeña", "ojos grises", "mofletes rojizos", "coletas"],
