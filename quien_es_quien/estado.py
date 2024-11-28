@@ -4,17 +4,16 @@ from src.escoger_personaje import escoger_personaje
 from src.comprobar_caracteristica import caracteristica_valida
 from src.girar_personajes import girar_pjs
 
-personajes = ("susan", "claire", "david", "anne", "robert", "anita", "joe", "george", "bill", "alfred", "max", "tom", "alex", "sam", "richard", "paul")
+personajes = ('robert', 'susan', 'claire', 'david', 'anne', 'george', 'joe', 'anita', 'bill', 'alfred', 'max', 'tom', 'alex', 'sam', 'richard', 'paul', 'maria', 'frans', 'philip', 'eric', 'peter', 'herman', 'bernard')
 
 class escoger(rx.State):
     personaje_escogido: str
     def escoger(self):
-        self.personajes_girar.clear()
         self.personaje_escogido = ""
         self.personaje_escogido = escoger_personaje(personajes)
         return rx.redirect("/juego")
     caracteristica: str
-    validacion: bool
+    validacion: bool = True
     def validar(self): 
         self.validacion = caracteristica_valida(self.caracteristica)
         self.cual_girar()
@@ -22,5 +21,17 @@ class escoger(rx.State):
     def cual_girar(self):
         if self.validacion:
             self.personajes_girar += girar_pjs(self.caracteristica, self.personajes_girar, self.personaje_escogido)
-    def susan(self):
-        return rx.cond(self.personajes_girar.__contains__("susan"), rx.text("girado") , rx.text("Susan"))
+        self.girar()
+    personajes_rectos: list = list(personajes)
+
+    girados: dict = {
+                    "susan": False, 'robert': False, 'claire': False, 'david': False, 'anne': False, 'george': False, 
+                    'joe': False, 'anita': False, 'bill': False, 'alfred': False, 'max': False, 'tom': False, 'alex': False, 
+                    'sam': False, 'richard': False, 'paul': False, 'maria': False, 'frans': False, 'philip': False, 
+                    'eric': False, 'peter': False, 'herman': False, 'bernard': False
+}
+    def girar(self):
+        for personaje in self.personajes_girar:
+            if personaje in self.personajes_rectos:
+                self.girados[personaje] = True
+                self.personajes_rectos.remove(personaje)
