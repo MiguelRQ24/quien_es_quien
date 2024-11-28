@@ -3,7 +3,7 @@ import quien_es_quien.estado as est
 import quien_es_quien.estilos as estilo
 
 def vista_persnajes():
-    return rx.grid( rx.cond(est.escoger.girados["susan"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjSsusan.jpg", width="100px", height="auto"), rx.text("Susan"), direction="column")),
+    return rx.grid( rx.cond(est.escoger.girados["susan"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjSusan.jpg", width="100px", height="auto"), rx.text("Susan"), direction="column")),
                     rx.cond(est.escoger.girados["robert"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjRobert.jpg", width="100px", height="auto"),rx.text("Robert"))),
                     rx.cond(est.escoger.girados["claire"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjClaire.jpg", width="100px", height="auto"),rx.text("Claire"))),
                     rx.cond(est.escoger.girados["david"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjDavid.jpg", width="100px", height="auto"),rx.text("David"))),
@@ -25,7 +25,7 @@ def vista_persnajes():
                     rx.cond(est.escoger.girados["eric"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjEric.jpg", width="100px", height="auto"),rx.text("Eric"))),
                     rx.cond(est.escoger.girados["peter"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjPeter.jpg", width="100px", height="auto"),rx.text("Peter"))),
                     rx.cond(est.escoger.girados["herman"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjHerman.jpg", width="100px", height="auto"),rx.text("Herman"))), 
-                    rx.cond(est.escoger.girados["bernard"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjBernerd.jpg", width="100px", height="auto"),rx.text("Bernard"))),
+                    rx.cond(est.escoger.girados["bernard"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjBernard.jpg", width="100px", height="auto"),rx.text("Bernard"))),
                     rx.cond(est.escoger.girados["charles"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjCharles.jpg", width="100px", height="auto"),rx.text("Charles"))),
                     columns="8", rows="3", spacing="3")
 def pregunta():
