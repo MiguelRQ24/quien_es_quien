@@ -1,5 +1,5 @@
 import reflex as rx
-caracteristicas = ["pelo cataño oscuro", "pelo escaso", "nariz mediana", "pelo rubio", "pelirojo", "boca pequeña", "ojos marrones", "pelo castaño", "nariz grande", "boca grande", "ojos azules", "mofletes colorados", "aspecto risueño", "aspecto triste", "pelo blanco", "nariz pequeña",  "mofletes estirados", "aspecto serio"]
+caracteristicas = ["pelo castaño oscuro", "pelo escaso", "nariz mediana", "pelo rubio", "pelirojo", "boca pequeña", "ojos marrones", "pelo castaño", "nariz grande", "boca grande", "ojos azules", "mofletes colorados", "aspecto risueño", "aspecto triste", "pelo blanco", "nariz pequeña",  "mofletes estirados", "aspecto serio"]
 personajes = {
     "robert": ["pelo castaño", "nariz grande", "boca grande", "ojos azules", "mofletes colorados", "aspecto triste"],
     "susan": ["pelo blanco", "nariz pequeña", "boca grande", "ojos marrones ", "mofletes colorados", "aspecto risueño"],
@@ -11,8 +11,8 @@ personajes = {
     "anita": ["pelo rubio", "nariz pequeña", "boca pequeña", "ojos grises", "mofletes rojizos", "coletas"],
     "bill": ["pelo escaso", "pelirojo", "nariz pequeña", "boca pequeña", "ojos marrones", "mofletes abundantes", "aspecto risueño"],
     "alfred":["pelirojo", "nariz mediana", "boca pequeña", "ojos azules", "bigote", "aspecto serio"],
-    "max": ["pelo cataño oscuro", "nariz grande", "boca grande", "ojos marrones", "bigote", "pelo rizado"],
-    "tom": ["pelo cataño oscuro", "nariz pequeña", "boca pequeña", "ojos azules", "mofletes estirados", "pelo escaso"],
+    "max": ["pelo castaño oscuro", "nariz grande", "boca grande", "ojos marrones", "bigote", "pelo rizado"],
+    "tom": ["pelo castaño oscuro", "nariz pequeña", "boca pequeña", "ojos azules", "mofletes estirados", "pelo escaso"],
     "alex": ["pelo castaño oscuro", "nariz pequeña", "boca grande", "ojos marrones", "mandibula prominente", "bigote"],
     "sam": ["pelo blanco", "nariz mediana", "boca pequeña", "ojos marrones oscuro", "mofletes rellenos", "pelo escaso"],
     "richard": ["pelo castaño", "nariz mediana", "boca pequeña", "ojos marrones", "barba abundante", "pelo escaso"],
