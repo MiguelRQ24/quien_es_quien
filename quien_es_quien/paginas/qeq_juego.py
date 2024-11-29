@@ -40,7 +40,10 @@ def pregunta():
                     rx.text(rx.cond(est.escoger.validacion, "", "caracteristica incorrecta, prueba otra vez")),)
             
 def personajes_volteados():
-    return rx.grid(columns="8", rows="3", spacing="3")
+    return rx.grid(rx.foreach(est.personajes,
+                              lambda i: rx.vstack(rx.image(src="/pjAzul.jpg", width="100px", height="auto"), rx.text("¿?¿?¿?")),
+                              ),
+                   columns="8", rows="3", spacing="3")
 
 def escoger_personaje_aleatorio():
     return rx.button(rx.text("Escoger Personaje Aleatorio", size="7"), size="4",
@@ -48,7 +51,7 @@ def escoger_personaje_aleatorio():
                      on_click=est.escoger.escoger
                      )
 def previa():
-    return rx.center( personajes_volteados(), escoger_personaje_aleatorio() )          
+    return rx.center( personajes_volteados(), escoger_personaje_aleatorio(), direction="column")       
 
 def juego():
-    return rx.center(rx.vstack(vista_persnajes(), pregunta(), direction="column" ))
+    return rx.center(rx.vstack(vista_persnajes(), pregunta(), direction="column", align="center" ))
