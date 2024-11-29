@@ -47,3 +47,7 @@ class escoger(rx.State):
             if personaje in self.personajes_rectos:
                 self.girados[personaje] = True
                 self.personajes_rectos.remove(personaje)
+    
+    intento_acierto: str
+
+        
