@@ -40,8 +40,8 @@ def pregunta():
                     rx.text(rx.cond(est.escoger.validacion, "", "caracteristica incorrecta, prueba otra vez")),)
             
 def personajes_volteados():
-    return rx.grid(rx.foreach(rx.Var.range(24),
-                              lambda i: rx.card("¿?", height="100px"),
+    return rx.grid(rx.foreach(est.personajes,
+                              lambda i: rx.vstack(rx.image(src="/pjAzul.jpg", width="100px", height="auto"), rx.text(i)),
                               ),
                    columns="8", rows="3", spacing="3")
 
