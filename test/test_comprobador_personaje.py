@@ -7,3 +7,7 @@ def test_correctos():
 
 def test_erroneo():
     assert not comprobador_pers("philip", "ñiñiñiñi")
+    
+def test_mensaje_en_mayus():
+    assert comprobador_pers('robert','Robert')
+    assert comprobador_pers('robert', 'ROBERT')    
