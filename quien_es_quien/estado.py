@@ -9,6 +9,9 @@ personajes = ('robert', 'susan', 'claire', 'david', 'anne', 'george', 'joe', 'an
 
 class escoger(rx.State):
     personaje_escogido: str
+    def jugar(self):
+        return rx.redirect("/previa")
+    
     def escoger(self):
         self.personaje_escogido = ""
         self.caracteristica = ""
