@@ -5,4 +5,5 @@ from rxconfig import config
 
 app = rx.App()
 app.add_page(menu.index)
+app.add_page(juego.previa)
 app.add_page(juego.juego)
