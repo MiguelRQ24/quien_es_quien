@@ -51,7 +51,7 @@ def escoger_personaje_aleatorio():
                      on_click=est.escoger.escoger
                      )
 def previa():
-    return rx.center( rx.vstack(personajes_volteados(), escoger_personaje_aleatorio()))         
+    return rx.center( rx.vstack(personajes_volteados(), escoger_personaje_aleatorio(), direction="column"))        
 
 def juego():
-    return rx.center(rx.vstack(vista_persnajes(), pregunta(), direction="column" ))
+    return rx.center(rx.vstack(vista_persnajes(), pregunta(), direction="column", align="center" ))
