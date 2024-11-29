@@ -6,7 +6,7 @@ def titulo():
 def jugar():
     return rx.button(rx.text("JUGAR", size="7"), size="4",
                      color_scheme="grass",
-                     on_click=est.escoger.escoger
+                     on_click=est.escoger.jugar
                      )
 
 def index() -> rx.Component:
