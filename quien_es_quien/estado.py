@@ -3,6 +3,7 @@ import quien_es_quien.personajes.personajes as pjs
 from src.escoger_personaje import escoger_personaje
 from src.comprobar_caracteristica import caracteristica_valida
 from src.girar_personajes import girar_pjs
+from src.comprobador_personaje import comprobador_pers
 
 personajes = ('robert', 'susan', 'claire', 'david', 'anne', 'george', 'joe', 'anita', 'bill', 'alfred', 'max', 'tom', 'alex', 'sam', 'richard', 'paul', 'maria', 'frans', 'philip', 'eric', 'peter', 'herman', 'bernard', "charles")
 
@@ -49,5 +50,7 @@ class escoger(rx.State):
                 self.personajes_rectos.remove(personaje)
     
     intento_acierto: str
-
-        
+   
+    def enviar_personaje(self):
+        comprobador_pers(self.personaje_escogido, self.intento_acierto)
+           

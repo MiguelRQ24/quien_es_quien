@@ -35,9 +35,9 @@ def pregunta():
                     rx.button("Enviar", on_click=est.escoger.validar, size="1"),
                     rx.text("Tu personaje es:"),
                     rx.input(placeholder="Personaje", on_change=est.escoger.set_intento_acierto, size='1'), 
-                    rx.button("Enviar"),
-                    direction="row",                   
-                                        ), rx.text(rx.cond(est.escoger.validacion, "", "caracteristica incorrecta, prueba otra vez")),)
+                    rx.button("Enviar", on_click=est.escoger.enviar_personaje),
+                    direction="row"), 
+                    rx.text(rx.cond(est.escoger.validacion, "", "caracteristica incorrecta, prueba otra vez")),)
             
                     
 
