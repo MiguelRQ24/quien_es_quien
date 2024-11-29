@@ -29,12 +29,15 @@ def vista_persnajes():
                     rx.cond(est.escoger.girados["alex"], rx.text("girado", color_scheme="red"), rx.vstack(rx.image(src="/personajes_qsq_01.png", width="100px", height="auto"), rx.text("Alex"))),
                     columns="8", rows="3", spacing="3")
 def pregunta():
-    return rx.hstack(rx.text("Tu personaje tiene:"),
-                     rx.input(placeholder="Caracteristica", on_change=est.escoger.set_caracteristica, size="1" ),
-                     rx.button("Enviar", on_click=est.escoger.validar, size="1"), 
-                     rx.text(rx.cond(est.escoger.validacion, "", "caracteristica incorrecta, prueba otra vez")),
-                     direction="row",
-                    )
+    return rx.vstack(
+        rx.hstack(  rx.text("Tu personaje tiene:"),
+                    rx.input(placeholder="Caracteristica", on_change=est.escoger.set_caracteristica, size="1" ),
+                    rx.button("Enviar", on_click=est.escoger.validar, size="1"),
+                    rx.text("Tu personaje es:"),
+                    rx.input(placeholder="Personaje", on_change=est.escoger.set_intento_acierto, size='1'), 
+                    rx.button("Enviar"),
+                    direction="row",                   
+                                        ), rx.text(rx.cond(est.escoger.validacion, "", "caracteristica incorrecta, prueba otra vez")),)
             
                     
 
