@@ -41,7 +41,7 @@ def pregunta():
             
 def personajes_volteados():
     return rx.grid(rx.foreach(est.personajes,
-                              lambda i: rx.vstack(rx.image(src="/pjAzul.jpg", width="100px", height="auto"), rx.text(i)),
+                              lambda i: rx.vstack(rx.image(src="/pjAzul.jpg", width="100px", height="auto"), rx.text("¿?¿?¿?")),
                               ),
                    columns="8", rows="3", spacing="3")
 
