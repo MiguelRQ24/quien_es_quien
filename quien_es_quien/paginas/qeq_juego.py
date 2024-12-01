@@ -3,7 +3,9 @@ import quien_es_quien.estado as est
 import quien_es_quien.estilos as estilo
 
 def vista_persnajes():
-    return rx.grid( rx.cond(est.escoger.girados["susan"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjSusan.jpg", width="100px", height="auto"), rx.text("Susan"), direction="column")),
+    return rx.grid(rx.foreach(est.personajes, lambda personaje: rx.cond(est.escoger.girados[str(personaje)], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src=f"/pj{personaje}.jpg", width="100px", height="auto"), rx.text(personaje), direction="column"))),
+                   columns="8", rows="3", spacing="3")
+    '''return rx.grid( rx.cond(est.escoger.girados["susan"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjSusan.jpg", width="100px", height="auto"), rx.text("Susan"), direction="column")),
                     rx.cond(est.escoger.girados["robert"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjRobert.jpg", width="100px", height="auto"),rx.text("Robert"))),
                     rx.cond(est.escoger.girados["claire"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjClaire.jpg", width="100px", height="auto"),rx.text("Claire"))),
                     rx.cond(est.escoger.girados["david"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjDavid.jpg", width="100px", height="auto"),rx.text("David"))),
@@ -28,6 +30,10 @@ def vista_persnajes():
                     rx.cond(est.escoger.girados["charles"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src="/pjCharles.jpg", width="100px", height="auto"),rx.text("Charles"))),
                     rx.cond(est.escoger.girados["alex"], rx.text("girado", color_scheme="red"), rx.vstack(rx.image(src="/personajes_qsq_01.png", width="100px", height="auto"), rx.text("Alex"))),
                     columns="8", rows="3", spacing="3")
+    '''
+    
+
+
 def pregunta():
     return rx.vstack(
         rx.hstack(  rx.text("Tu personaje tiene:"),
