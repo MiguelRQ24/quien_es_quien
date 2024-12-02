@@ -57,5 +57,5 @@ def previa():
 
 def juego():
     return rx.center(rx.vstack(vista_persnajes(), 
-                               rx.hstack(pregunta(),enviar_pj()),rx.text(f"{est.escoger.girados.keys()}"), 
+                               rx.hstack(pregunta(),enviar_pj()), 
                                direction="column", align="center" ))
