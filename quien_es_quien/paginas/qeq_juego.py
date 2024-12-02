@@ -55,6 +55,9 @@ def enviar_pj():
                                 rx.alert_dialog.cancel(
                                     rx.button("Volver al menu", on_click=rx.redirect("/")),
                                 ),
+                                rx.alert_dialog.action(
+                                    rx.button("Volver a jugar", on_click=rx.redirect("/previa")),
+                                ),
                                 spacing="3",
                             ),
                         ),
