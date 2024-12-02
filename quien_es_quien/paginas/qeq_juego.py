@@ -53,7 +53,7 @@ def enviar_pj():
                                                        ),
                             rx.flex(
                                 rx.alert_dialog.cancel(
-                                    rx.button("Volver al menu"),
+                                    rx.button("Volver al menu", on_click=rx.redirect("/")),
                                 ),
                                 spacing="3",
                             ),
