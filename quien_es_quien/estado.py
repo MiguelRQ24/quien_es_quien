@@ -53,7 +53,7 @@ class escoger(rx.State):
                 self.personajes_rectos.remove(personaje)
     
     intento_acierto: str
-   
-    def enviar_personaje(self):
-        comprobador_pers(self.personaje_escogido, self.intento_acierto)
+    gano: bool 
+    def comprobar_pj(self):
+        self.gano = comprobador_pers(self.personaje_escogido, self.intento_acierto)
            

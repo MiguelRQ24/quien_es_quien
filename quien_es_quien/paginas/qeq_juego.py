@@ -34,11 +34,37 @@ def pregunta():
                     rx.input(placeholder="Caracteristica", on_change=est.escoger.set_caracteristica, size="1" ),
                     rx.button("Enviar", on_click=est.escoger.validar, size="1"),
                     rx.text("Tu personaje es:"),
-                    rx.input(placeholder="Personaje", on_change=est.escoger.set_intento_acierto, size='1'), 
-                    rx.button("Enviar", on_click=est.escoger.enviar_personaje),
+
                     direction="row"), 
                     rx.text(rx.cond(est.escoger.validacion, "", "caracteristica incorrecta, prueba otra vez")),)
-            
+
+def enviar_pj():
+    return  rx.hstack(
+                      rx.input(placeholder="Personaje", on_change=est.escoger.set_intento_acierto, size='1'),
+                      rx.alert_dialog.root(
+                        rx.alert_dialog.trigger(
+                            rx.button("Enviar", on_click=est.escoger.comprobar_pj),
+                        ),
+                        rx.alert_dialog.content(
+                            rx.alert_dialog.title(rx.cond(est.escoger.gano, "¡Usted ha ganado!", "¡Usted ha perdido!")),
+                            rx.alert_dialog.description(rx.cond(est.escoger.gano, 
+                                                                f"¡Felicidades! El personaje era {est.escoger.personaje_escogido}",
+                                                                f"El personaje era {est.escoger.personaje_escogido} y usted ha elegido a {est.escoger.intento_acierto}")
+                                                       ),
+                            rx.flex(
+                                rx.alert_dialog.cancel(
+                                    rx.button("Volver al menu"),
+                                ),
+                                spacing="3",
+                            ),
+                        ),
+                    )                      
+                      ) 
+
+
+
+ 
+                    
 def personajes_volteados():
     return rx.grid(rx.foreach(est.personajes,
                               lambda i: rx.vstack(rx.image(src="/pjAzul.jpg", width="100px", height="auto"), rx.text("¿?¿?¿?")),
@@ -54,4 +80,6 @@ def previa():
     return rx.center( personajes_volteados(), escoger_personaje_aleatorio(), direction="column")       
 
 def juego():
-    return rx.center(rx.vstack(vista_persnajes(), pregunta(), direction="column", align="center" ))
+    return rx.center(rx.vstack(vista_persnajes(), 
+                               rx.hstack(pregunta(),enviar_pj()), 
+                               direction="column", align="center" ))
