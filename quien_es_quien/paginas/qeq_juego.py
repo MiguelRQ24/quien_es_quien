@@ -3,7 +3,13 @@ import quien_es_quien.estado as est
 import quien_es_quien.estilos as estilo
 
 def vista_persnajes() -> rx.Component:
-    return rx.grid(rx.foreach(est.personajes, lambda personaje: rx.cond(est.escoger.girados[f"{personaje}"], rx.text("girado", color_scheme="red") , rx.vstack(rx.image(src=f"/pj{personaje}.jpg", width="100px", height="auto"), rx.text(personaje), direction="column"))),
+    return rx.grid(rx.foreach(est.personajes, 
+                              lambda personaje: rx.cond(
+                                                        est.escoger.girados[f"{personaje}"], 
+                                                        rx.text("girado", color_scheme="red"), 
+                                                        rx.vstack(rx.image(src=f"/pj{personaje}.jpg", width="100px", height="auto"), rx.text(personaje))
+                                                        )
+                             ),
                    columns="8", rows="3", spacing="3",)
 def pregunta():
     return rx.vstack(
