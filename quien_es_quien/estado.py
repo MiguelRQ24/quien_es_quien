@@ -39,7 +39,7 @@ class escoger(rx.State):
     def cual_girar(self):
         if self.validacion:
             self.personajes_girar += girar_pjs(self.caracteristica, self.personajes_girar, self.personaje_escogido)
-        self.girar()
+            self.girar()
         
     personajes_rectos: list
 
