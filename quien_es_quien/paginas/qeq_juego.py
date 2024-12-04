@@ -24,10 +24,11 @@ def pregunta():
 def enviar_pj():
     return  rx.hstack(
                       rx.input(placeholder="Personaje", on_change=est.escoger.set_intento_acierto, size='1'),
+                      rx.cond(est.escoger.intento_acierto,
                       rx.alert_dialog.root(
-                        rx.alert_dialog.trigger(
+                        rx.alert_dialog.trigger( 
                             rx.button("Enviar", on_click=est.escoger.comprobar_pj),
-                        ),
+                        ), 
                         rx.alert_dialog.content(
                             rx.alert_dialog.title(rx.cond(est.escoger.gano, "¡Usted ha ganado!", "¡Usted ha perdido!")),
                             rx.alert_dialog.description(rx.cond(est.escoger.gano, 
@@ -44,7 +45,9 @@ def enviar_pj():
                                 spacing="3",
                             ),
                         ),
-                    )                      
+                        ),
+                        rx.button("Enviar")
+                        )                     
                       ) 
                
 def personajes_volteados():
