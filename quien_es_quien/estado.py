@@ -26,6 +26,7 @@ class escoger(rx.State):
                     'eric': False, 'peter': False, 'herman': False, 'bernard': False
 }
         self.personaje_escogido = escoger_personaje(personajes)
+        self.intento_acierto = ""
         return rx.redirect("/juego")
     
     caracteristica: str
