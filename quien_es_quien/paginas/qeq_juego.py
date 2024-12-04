@@ -61,10 +61,14 @@ def escoger_personaje_aleatorio():
                      color_scheme="blue",
                      on_click=est.escoger.escoger
                      )
+
+def tablero_botones():
+    return rx.center(rx.vstack(vista_persnajes(), 
+                               rx.hstack(pregunta(),enviar_pj()), 
+                               direction="column", align="center" ))
+
 def previa():
     return rx.center( personajes_volteados(), escoger_personaje_aleatorio(), direction="column")       
 
 def juego():
-    return rx.center(rx.vstack(vista_persnajes(), 
-                               rx.hstack(pregunta(),enviar_pj()), 
-                               direction="column", align="center" ))
+    return tablero_botones()
