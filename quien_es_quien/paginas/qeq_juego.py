@@ -1,6 +1,7 @@
 import reflex as rx
 import quien_es_quien.estado as est
 import quien_es_quien.estilos as estilo
+import quien_es_quien.personajes.personajes as pjs
 
 def vista_persnajes() -> rx.Component:
     return rx.grid(rx.foreach(est.personajes, 
@@ -49,7 +50,10 @@ def enviar_pj():
                         rx.button("Enviar")
                         )                     
                       ) 
-               
+
+def caracteristicas():
+    return rx.unordered_list(rx.foreach(pjs.caracteristicas, lambda carcateristica : rx.list_item(rx.hstack(f"{carcateristica}", rx.checkbox()))), list_style_type="circle")
+
 def personajes_volteados():
     return rx.grid(rx.foreach(est.personajes,
                               lambda i: rx.vstack(rx.image(src="/pjAzul.jpg", width="100px", height="auto"), rx.text("¿?¿?¿?")),
@@ -61,10 +65,14 @@ def escoger_personaje_aleatorio():
                      color_scheme="blue",
                      on_click=est.escoger.escoger
                      )
+
+def tablero_botones():
+    return rx.center(rx.vstack(vista_persnajes(), 
+                               rx.hstack(pregunta(),enviar_pj()), 
+                               direction="column", align="center" ))
+
 def previa():
     return rx.center( personajes_volteados(), escoger_personaje_aleatorio(), direction="column")       
 
 def juego():
-    return rx.center(rx.vstack(vista_persnajes(), 
-                               rx.hstack(pregunta(),enviar_pj()), 
-                               direction="column", align="center" ))
+    return rx.center(rx.hstack((tablero_botones()), caracteristicas(), align="center", spacing="6" )) 
