@@ -22,3 +22,5 @@ def test_correcto():
             'eric': True, 'peter': True, 'herman': True, 'bernard': True, "charles": True
             }
     
+    assert girar_pjs(girados, []) == girados
+    
