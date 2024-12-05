@@ -1,7 +1,7 @@
 import reflex as rx
 import quien_es_quien.personajes.personajes as pjs
 def pj_principal_la_tiene(caracteristica, personaje_principal):
-    return True if caracteristica in pjs.personajes[personaje_principal] else False
+    return True if caracteristica.lower() in pjs.personajes[personaje_principal] else False
 
 def cuales_girar_pjs(caracteristica, personaje_girados, personaje_principal):
     personajes_a_girar = []
