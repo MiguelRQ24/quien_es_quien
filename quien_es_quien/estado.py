@@ -36,7 +36,7 @@ class estado(rx.State):
                     "susan": False, 'robert': False, 'claire': False, 'david': False, 'anne': False, 'george': False, 
                     'joe': False, 'anita': False, 'bill': False, 'alfred': False, 'max': False, 'tom': False, 'alex': False, 
                     'sam': False, 'richard': False, 'paul': False, 'maria': False, 'frans': False, 'philip': False, 
-                    'eric': False, 'peter': False, 'herman': False, 'bernard': False
+                    'eric': False, 'peter': False, 'herman': False, 'bernard': False, "charles": False
                         }
         
     def validar(self): 
