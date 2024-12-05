@@ -52,7 +52,7 @@ def enviar_pj():
                       ) 
 
 def caracteristicas():
-    return rx.unordered_list(rx.foreach(pjs.caracteristicas, lambda carcateristica : rx.list_item(rx.hstack(f"{carcateristica}", rx.checkbox()))), list_style_type="circle")
+    return rx.unordered_list(rx.foreach(pjs.caracteristicas, lambda carcateristica : rx.hstack(rx.checkbox(f"{carcateristica}", size="3"))))
 
 def personajes_volteados():
     return rx.grid(rx.foreach(est.personajes,
