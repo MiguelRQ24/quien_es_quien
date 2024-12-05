@@ -25,5 +25,4 @@ personajes = {
     "herman":["pelirojo", "nariz grande", "boca pequeña", "ojos marrones", "mandibula pronunciada", "aspecto serio", "pelo escaso"],
     "bernard":["pelo castaño", "nariz grande", "boca pequeña", "ojos marrones", "gorra", "aspecto serio"],
     "charles": ["pelo rubio", "nariz pequeña", "boca grande", "ojos marrones","aspecto feliz"]
-
 }
