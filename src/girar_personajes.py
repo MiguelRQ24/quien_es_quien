@@ -9,10 +9,10 @@ def cuales_girar_pjs(caracteristica, personaje_girados, personaje_principal):
     for personaje in pjs.personajes.keys():
         if personaje not in personaje_girados:
             if la_tiene:
-                if caracteristica not in pjs.personajes[personaje]:
+                if caracteristica.lower() not in pjs.personajes[personaje]:
                     personajes_a_girar.append(personaje)
             else:
-                if caracteristica in pjs.personajes[personaje]:
+                if caracteristica.lower() in pjs.personajes[personaje]:
                     personajes_a_girar.append(personaje)
     return personajes_a_girar
 
