@@ -21,6 +21,7 @@ class estado(rx.State):
         return rx.redirect("/previa")
     
     def escoger(self):
+        self.restablecer_variables()
         self.personaje_escogido = escoger_personaje(personajes)
         return rx.redirect("/juego")
     
