@@ -15,3 +15,8 @@ def cuales_girar_pjs(caracteristica, personaje_girados, personaje_principal):
                 if caracteristica in pjs.personajes[personaje]:
                     personajes_a_girar.append(personaje)
     return personajes_a_girar
+
+def girar_pjs(girados, personajes_girar):
+    for personaje in personajes_girar:
+        girados[personaje] = True
+    return girados
