@@ -21,3 +21,4 @@ def test_correcto():
             'sam': True, 'richard': True, 'paul': True, 'maria': True, 'frans': True, 'philip': True, 
             'eric': True, 'peter': True, 'herman': True, 'bernard': True, "charles": True
             }
+    
