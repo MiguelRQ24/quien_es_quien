@@ -7,7 +7,7 @@ def vista_persnajes() -> rx.Component:
     return rx.grid(rx.foreach(est.personajes, 
                               lambda personaje: rx.cond(
                                                         est.estado.girados[personaje], 
-                                                        rx.vstack(rx.image(src=f"/pj{personaje}BN.jpg", width="100px", height="auto"), rx.text(personaje, color_scheme="red")), 
+                                                        rx.vstack(rx.image(src=f"/pj{personaje}BN.jpg", width="100px", height="auto"), rx.text("Descartado", color_scheme="red")), 
                                                         rx.vstack(rx.image(src=f"/pj{personaje}.jpg", width="100px", height="auto"), rx.text(personaje))
                                                         )
                              ),
