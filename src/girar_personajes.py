@@ -3,7 +3,7 @@ import quien_es_quien.personajes.personajes as pjs
 def pj_principal_la_tiene(caracteristica, personaje_principal):
     return True if caracteristica in pjs.personajes[personaje_principal] else False
 
-def girar_pjs(caracteristica, personaje_girados, personaje_principal):
+def cuales_girar_pjs(caracteristica, personaje_girados, personaje_principal):
     personajes_a_girar = []
     la_tiene = pj_principal_la_tiene(caracteristica, personaje_principal)
     for personaje in pjs.personajes.keys():

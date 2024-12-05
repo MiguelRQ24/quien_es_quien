@@ -2,7 +2,7 @@ import reflex as rx
 import quien_es_quien.personajes.personajes as pjs
 from src.escoger_personaje import escoger_personaje
 from src.comprobar_caracteristica import caracteristica_valida
-from src.girar_personajes import girar_pjs
+from src.girar_personajes import cuales_girar_pjs
 from src.comprobador_personaje import comprobador_pers
 
 personajes = ['robert', 'susan', 'claire', 'david', 'anne', 'george', 'joe', 'anita', 'bill', 'alfred', 'max', 'tom', 'alex', 'sam', 'richard', 'paul', 'maria', 'frans', 'philip', 'eric', 'peter', 'herman', 'bernard', "charles"]
@@ -45,7 +45,7 @@ class estado(rx.State):
 
     def cual_girar(self):
         if self.validacion:
-            self.personajes_girar += girar_pjs(self.caracteristica, self.personajes_girar, self.personaje_escogido)
+            self.personajes_girar += cuales_girar_pjs(self.caracteristica, self.personajes_girar, self.personaje_escogido)
             self.girar()
         
     def girar(self):
