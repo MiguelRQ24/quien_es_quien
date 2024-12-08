@@ -17,13 +17,12 @@ def pregunta():
         rx.hstack(  rx.text("Tu personaje tiene:"),
                     rx.input(placeholder="Caracteristica", on_change=est.estado.set_caracteristica, size="1" ),
                     rx.button("Enviar", on_click=est.estado.validar, size="1"),
-                    rx.text("Tu personaje es:"),
-
                     direction="row"), 
                     rx.text(rx.cond(est.estado.validacion, "", "caracteristica incorrecta, prueba otra vez")),)
 
 def enviar_pj():
     return  rx.hstack(
+                      rx.text("Tu personaje es:"),
                       rx.input(placeholder="Personaje", on_change=est.estado.set_intento_acierto, size='1'),
                       rx.cond(est.estado.intento_acierto,
                       rx.alert_dialog.root(
@@ -67,7 +66,9 @@ def escoger_personaje_aleatorio():
                      )
 
 def tablero_botones():
-    return rx.center(rx.vstack(vista_persnajes(), 
+    return rx.center(rx.vstack(                               
+                               rx.heading("¿Quien es Quien?"),
+                               vista_persnajes(), 
                                rx.hstack(pregunta(),enviar_pj()), 
                                direction="column", align="center" ))
 
