@@ -6,8 +6,8 @@ import quien_es_quien.personajes.personajes as pjs
 def vista_persnajes() -> rx.Component:
     return rx.grid(rx.foreach(est.personajes, 
                               lambda personaje: rx.cond(
-                                                        est.estado.girados[f"{personaje}"], 
-                                                        rx.vstack(rx.image(src=f"/pj{personaje}BN.jpg", width="100px", height="auto"), rx.text(personaje, color_scheme="red")), 
+                                                        est.estado.girados[personaje], 
+                                                        rx.vstack(rx.image(src=f"/pj{personaje}BN.jpg", width="100px", height="auto"), rx.text("Descartado", color_scheme="red")), 
                                                         rx.vstack(rx.image(src=f"/pj{personaje}.jpg", width="100px", height="auto"), rx.text(personaje))
                                                         )
                              ),
@@ -52,7 +52,7 @@ def enviar_pj():
                       ) 
 
 def caracteristicas():
-    return rx.unordered_list(rx.foreach(pjs.caracteristicas, lambda carcateristica : rx.list_item(rx.hstack(f"{carcateristica}", rx.checkbox()))), list_style_type="circle")
+    return rx.unordered_list(rx.heading("Caracteristicas Posibles:"),rx.foreach(pjs.caracteristicas, lambda carcateristica : rx.hstack(rx.checkbox(f"{carcateristica}", size="3"))))
 
 def personajes_volteados():
     return rx.grid(rx.foreach(est.personajes,
