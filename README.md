@@ -91,3 +91,39 @@ Cuando termine de compilar entre en el localhost que ponga en `App running at: h
 App running at: http://localhost:3000
 Backend running at: http://0.0.0.0:8000
 ```
+
+## Metodología
+
+Usamos un panel Kanban y la metodología SCRUM que veniamos aplicando en clase durante el curso.
+
+## Descripción técnica
+
+### Requisitos funcionales/no funcionales, NOT LIST
+
+Al comezar el proyecto realizamos la siguiente NOT LIST:
+
+**In scope:** 
+-   Menú de Inicio
+-   Disposición de Imágenes
+-   Input de caracteristicas
+-   Validador de caracteristicas
+-   Descartar personajes automaticamente
+-   Sistema de cambio de imágenes al descartar personajes.
+-   Lista de caracteristicas posibles
+-   Input de personaje
+-   Mostrar el resultado de la partida al jugador
+-   Botones de "Volver al menu" y "Volver a jugar"
+
+**Unresolved**
+-   Ordenar las imagenes de forma aleatoria
+-   Fondo de pantalla, temática estética y/o ambientación
+-   Límite de intentos de pregunta
+-   Puntuaciones
+
+**Out Scope**
+-   Log in
+-   Cambio de Idioma
+-   Opciones en el menu(descarte de personajes manual)
+
+### Historias de usuaria
+
