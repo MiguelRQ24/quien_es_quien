@@ -127,3 +127,6 @@ Al comezar el proyecto realizamos la siguiente NOT LIST:
 
 ### Historias de usuaria
 
+### Arquitectura de la aplicación
+
+## Diseño 
