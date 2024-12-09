@@ -31,4 +31,7 @@
 
 ## Introducción
 
-Proyecto de programación del primer trimestre.
+Este proyecto es una adaptación del juego clásico ¿Quién es Quién?, en el que intentarás adivinar por descarte el personaje elegido por la máquina. Lo realizamos [Alberto Orihuela Martínez](https://github.com/LxKarcer) y [Miguel Rodríguez Quintás](https://github.com/MiguelRQ24) durante el ultimo mes del primer trimestre de 1º de Desarrollo de Aplicaciones Multiplataforma en el módulo de Programación. 
+
+En este proyecto usamos [Python](https://www.python.org/) para la lógica, y para la creación de sitio web usamos el framework [Reflex](https://reflex.dev/).
+
