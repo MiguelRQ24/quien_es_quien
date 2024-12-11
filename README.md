@@ -130,7 +130,7 @@ Al comezar el proyecto realizamos la siguiente NOT LIST:
 ### Arquitectura de la aplicación
 
 ## Diseño 
-!["Diagrama de Dependencias"](./assets/diagrama_de_dependencias.png)
+!["Diagrama de Dependencias"](./images/diagrama_de_dependencias.png)
 
 ## Implementacion
 
@@ -211,6 +211,7 @@ def girar_pjs(girados, personajes_girar):
 ## Pruebas
 
 ### Coverage
+!["Diagrama de Dependencias"](./images/Pytest_coverage_success.png)
 
 ### Test Unidad
 
