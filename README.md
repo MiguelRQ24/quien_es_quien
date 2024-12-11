@@ -215,6 +215,14 @@ def girar_pjs(girados, personajes_girar):
 
 ### Frontend
 
+Asi es el apartado visual de la pagina web, esta en el directorio [paginas](./quien_es_quien/paginas/) dentro del quien_es_quien
+
+!["Menu"](./images/menu.png)
+
+!["Previa"](./images/previa.png)
+
+!["Juego"](./images/juego.png)
+
 ## Pruebas
 
 ### Coverage
