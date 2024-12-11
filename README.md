@@ -127,8 +127,13 @@ Al comezar el proyecto realizamos la siguiente NOT LIST:
 
 ### Historias de usuaria
 
+- Boton de Inicio.
+- Menu del Juego.
+- Eleccion al azar de personaje.
+- Tablero de juego.
 ### Arquitectura de la aplicación
 
+Usuario -> Juego -> Programación
 ## Diseño 
 
 ### Diagrama de Componentes
