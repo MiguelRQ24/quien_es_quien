@@ -13,7 +13,7 @@
     -   [**Historias de usuaria**](#historias-de-usuaria)
     -   [**Arquitectura de la aplicación**](#arquitectura-de-la-aplicación)
 -   [**Diseño**](#diseño)
-    -   [**Diagrama de Componentes**](#componentes)
+    -   [**Diagrama de Componentes**](#diagrama-de-componentes)
 -   [**Implementacion**](#implementacion)
     -   [**Tecnologías y Herramientas utilizadas**](#tecnologías-y-herramientas-elegidas)
     -   [**Backend**](#backend)
