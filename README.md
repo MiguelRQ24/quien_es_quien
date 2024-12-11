@@ -131,3 +131,89 @@ Al comezar el proyecto realizamos la siguiente NOT LIST:
 
 ## Diseño 
 !["Diagrama de Dependencias"](./assets/diagrama_de_dependencias.png)
+
+## Implementacion
+
+### Tecnologías y Herramientas utilizadas
+
+-   **[Python](https://docs.python.org/3.12/)** es un lenguaje de programación de propósito general, lo que significa que se puede utilizar para crear una amplia variedad de aplicaciones y no está especializado en un problema específico.
+    
+    - **[Random](https://docs.python.org/3/library/random.html)**
+    Random es una libreria que genera números pseudo-aleatorios multiproposito, sus aplicaciones abarcan tanto listas, diccionarios, íntegros, etc.
+    
+    
+    -   **[Pytest](https://docs.pytest.org/en/6.2.x/)** es utilizado para escribir casos test y testear las funciones **Python**. 
+    
+    -   **[Coverage](https://pypi.org/project/coverage/)** es una herramienta para medir cuanto porcentage de código está cubierto, requiere tener instalado **Pytest**. 
+ 
+- **[Reflex](https://reflex.dev/docs/library/)**
+    - Reflex es un framework para python y su utilizacion en entornos de navegador que usa implementaciones de 
+
+### Backend
+La primera funcion del backend es escoger aleatoriamente el personaje a adivinar. 
+
+```python
+from random import choice
+
+def escoger_personaje(personajes):
+    return choice(personajes)
+
+```
+
+En esta parte del código comprobamos si el intento de adivinar del usuario es correcto.
+
+```python
+def comprobador_pers(personaje_elegido,input_usuario):
+    return personaje_elegido == input_usuario.lower() 
+```
+
+En este segmento de código comprobamos si la característica introducida por el usuario és válida o no.
+
+```python
+from quien_es_quien.personajes.personajes import caracteristicas 
+def caracteristica_valida(atributo):
+    return atributo.lower() in caracteristicas
+
+```
+
+Aquí comprobamos que personajes debemos girar con la función `cuales_girar_pjs()`, para realizarlo correctamente llama a la función `pj_principal_la_tiene()` para saber si el personaje elegido tiene o no la caracteristica enviada por el usuario.
+
+```python
+import quien_es_quien.personajes.personajes as pjs
+def pj_principal_la_tiene(caracteristica, personaje_principal):
+    return True if caracteristica.lower() in pjs.personajes[personaje_principal] else False
+
+def cuales_girar_pjs(caracteristica, personaje_girados, personaje_principal):
+    personajes_a_girar = []
+    la_tiene = pj_principal_la_tiene(caracteristica, personaje_principal)
+    for personaje in pjs.personajes.keys():
+        if personaje not in personaje_girados:
+            if la_tiene:
+                if caracteristica.lower() not in pjs.personajes[personaje]:
+                    personajes_a_girar.append(personaje)
+            else:
+                if caracteristica.lower() in pjs.personajes[personaje]:
+                    personajes_a_girar.append(personaje)
+    return personajes_a_girar
+```
+
+Este segmento de código se encarga de cambiar el valor a `True` de cada personaje en el diccionario `girados` que este en la lista `personajes_a_girar` que nos devuelve la anterior función.
+```python
+def girar_pjs(girados, personajes_girar):
+    for personaje in personajes_girar:
+        girados[personaje] = True
+    return girados
+```
+
+
+### Frontend
+
+## Pruebas
+
+### Coverage
+
+### Test Unidad
+
+### Test Integración
+
+No se han realizado.
