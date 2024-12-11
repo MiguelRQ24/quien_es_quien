@@ -230,6 +230,8 @@ Asi es el apartado visual de la pagina web, esta en el directorio [paginas](./qu
 
 ### Test Unidad
 
+!["Casos Test"](./images/casos_test.png)
+
 ### Test Integración
 
 No se han realizado.
