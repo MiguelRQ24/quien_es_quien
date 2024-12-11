@@ -130,6 +130,8 @@ Al comezar el proyecto realizamos la siguiente NOT LIST:
 ### Arquitectura de la aplicación
 
 ## Diseño 
+
+### Diagrama de Componentes
 !["Diagrama de Dependencias"](./images/diagrama_de_dependencias.png)
 
 ## Implementacion
