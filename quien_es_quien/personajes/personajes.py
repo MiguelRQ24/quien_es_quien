@@ -1,5 +1,5 @@
 import reflex as rx
-caracteristicas = ["sombrero", "perilla", "gafas", "pelo castaño oscuro", "pelo escaso", "nariz pequeña", "pelo rubio", "pelirojo", "boca pequeña", "ojos marrones", "pelo castaño", "nariz grande", "boca grande", "ojos azules", "mofletes colorados", "aspecto risueño", "aspecto triste", "pelo blanco",  "aspecto serio", "bigote"]
+caracteristicas = ["mujer", "hombbre", "sombrero", "perilla", "gafas", "pelo castaño oscuro", "pelo escaso", "nariz pequeña", "pelo rubio", "pelirojo", "boca pequeña", "ojos marrones", "pelo castaño", "nariz grande", "boca grande", "ojos azules", "mofletes colorados", "aspecto risueño", "aspecto triste", "pelo blanco",  "aspecto serio", "bigote"]
 personajes = {
     "robert": ["hombre", "pelo castaño", "nariz grande", "boca grande", "ojos azules", "mofletes colorados", "aspecto triste"],
     "susan": ["mujer", "pelo blanco", "nariz pequeña", "boca grande", "ojos marrones ", "mofletes colorados", "aspecto risueño"],
