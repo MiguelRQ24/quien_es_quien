@@ -127,10 +127,7 @@ Al comezar el proyecto realizamos la siguiente NOT LIST:
 
 ### Historias de usuaria
 
-- Boton de Inicio.
-- Menu del Juego.
-- Eleccion al azar de personaje.
-- Tablero de juego.
+[Proyecto Quien es Quien](https://github.com/users/MiguelRQ24/projects/2/views/1)
 ### Arquitectura de la aplicación
 
 Usuario -> Juego -> Programación
