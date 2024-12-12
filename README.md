@@ -240,7 +240,7 @@ No se han realizado.
 Para controlar el tiempo utilizado hemos usado Wakatime:
 !["Grafica consumo tiempo"](./images/grafica_tiempo.png)
 
-!["Tiempo total y Estimado"](./images/total_estimado.png)
+!["Tiempo total y Estimado"](./images/tiempo_total_estimado.png)
 
 ### Justificación temporal
 
