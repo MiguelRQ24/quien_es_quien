@@ -26,6 +26,7 @@
     -   [**Wakatime**](#wakatime)
     -   [**Justificación temporal**](#justificación-temporal)
 -   [**Conclusiones**](#conclusiones)
+    -   [**Uso de la IA**](#uso-de-la-ia)
     -   [**Posibles mejoras**](#posibles-mejoras)
     -   [**Dificultades**](#dificultades)
 
@@ -249,6 +250,10 @@ Basandonos en los graficos anteriores lo que mas tiempo nos llevo fue comprender
 ## Conclusiones
 
 Durante el Desarrollo de este juego hemos aprendido bastante tanto sobre el manejo de GIT como sonbre GitHub. Tambien que aunque el framework [Reflex](https://reflex.dev/docs/library/) nos fuese complicado de comprender, sin el uso de este nunca habría habido interfaz en el juego.
+
+### Uso de la IA
+
+En este trabajo no hemos hecho uso de ninguna IA para realizar este trabajo.
 
 ### Posibles mejoras
 
