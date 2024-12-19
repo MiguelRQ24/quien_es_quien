@@ -5,7 +5,7 @@ from src.comprobar_caracteristica import caracteristica_valida
 from src.girar_personajes import cuales_girar_pjs, girar_pjs
 from src.comprobador_personaje import comprobador_pers
 
-personajes = ['robert', 'susan', 'claire', 'david', 'anne', 'george', 'joe', 'anita', 'bill', 'alfred', 'max', 'tom', 'alex', 'sam', 'richard', 'paul', 'maria', 'frans', 'philip', 'eric', 'peter', 'herman', 'bernard', "charles"]
+personajes = ['Robert', 'Susan', 'Claire', 'David', 'Anne', 'George', 'Joe', 'Anita', 'Bill', 'Alfred', 'Max', 'Tom', 'Alex', 'Sam', 'Richard', 'Paul', 'Maria', 'Frans', 'Philip', 'Eric', 'Peter', 'Herman', 'Bernard', "Charles"]
 
 class estado(rx.State):
     personaje_escogido: str

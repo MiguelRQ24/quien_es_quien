@@ -2,12 +2,12 @@ import pytest
 from src.girar_personajes import pj_principal_la_tiene
 
 def test_incorrecto():
-    assert not pj_principal_la_tiene("pelo rubio", "philip")
-    assert not pj_principal_la_tiene("ojos marrones", "anita")
-    assert not pj_principal_la_tiene("ojouhyuyguygy", "anita")
+    assert not pj_principal_la_tiene("pelo rubio", "Philip")
+    assert not pj_principal_la_tiene("ojos marrones", "Anita")
+    assert not pj_principal_la_tiene("ojouhyuyguygy", "Anita")
     
 
 def test_correcto():
-    assert pj_principal_la_tiene("pelo blanco", "susan")
-    assert pj_principal_la_tiene("boca grande", "susan")
+    assert pj_principal_la_tiene("pelo blanco", "Susan")
+    assert pj_principal_la_tiene("boca grande", "Susan")
     
